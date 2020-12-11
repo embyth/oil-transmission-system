@@ -1,0 +1,167 @@
+.site-aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 35%;
+  min-width: 660px;
+  height: 100vh;
+  background-color: $dark;
+  padding: 20px 50px 30px;
+  opacity: 100%;
+  transition: left 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 6;
+  visibility: visible;
+  text-align: center;
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+    left: -100%;
+  }
+
+  @media ($tablet) {
+    min-width: unset;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px 30px;
+  }
+
+  @media ($mobile) {
+    padding: 10px 5px 20px;
+  }
+
+  .socials {
+    margin-top: auto;
+  }
+}
+
+.site-aside__close {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 0;
+  line-height: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+    background-color: $primary;
+    transition: 0.3s ease;
+  }
+
+  &--svg {
+    fill: $white;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    .site-aside__close--svg {
+      fill: $dark;
+    }
+
+    &::after {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.site-aside__overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba($black, 0.3);
+  transition: opacity 0.3s ease;
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+
+.site-aside__links-list {
+  @include list-reset();
+
+  width: 100%;
+  padding: 80px 0 30px;
+  display: flex;
+  flex-flow: column nowrap;
+
+  @media ($mobile) {
+    padding: 30px 0;
+  }
+}
+
+.site-aside__links-item {
+  margin-bottom: 30px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  a {
+    position: relative;
+    color: $white;
+    font-weight: fw(light);
+    font-size: fz(link-d);
+    transition: color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $primary;
+      transition: width 0.3s ease;
+    }
+
+    &:hover,
+    &:focus {
+      color: $primary;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:active {
+      opacity: 30%;
+    }
+
+    @media ($mobile) {
+      font-size: fz(link-m);
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+}

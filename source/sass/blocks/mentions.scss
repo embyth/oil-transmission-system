@@ -1,0 +1,38 @@
+.mentions {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.mentions__list {
+  @include list-reset;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.mentions__item {
+  padding: 10px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+
+  &:first-of-type {
+    margin-right: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    filter: grayscale(0);
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: none;
+  }
+}
+
+.mentions__logo {
+  width: 30px;
+}

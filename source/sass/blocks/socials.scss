@@ -1,0 +1,81 @@
+.socials {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+.socials__list {
+  @include list-reset;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.socials__svg {
+  fill: $white;
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s ease;
+}
+
+.socials__item {
+  margin-right: 30px;
+
+  &--telegram {
+    a::after {
+      background: #0088cc;
+    }
+  }
+
+  &--github {
+    a::after {
+      background: #24292e;
+    }
+  }
+
+  &--instagram {
+    a::after {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    }
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    line-height: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      transition: width 0.3s ease, height 0.3s ease;
+      z-index: -1;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
