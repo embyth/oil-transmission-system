@@ -26,12 +26,14 @@ $paddings: (
 
 // Font Variables
 $font-stack: (
-  opensans: ("Open Sans", "Tahoma", "Arial", sans-serif),
+  poppins: ("Poppins", "Tahoma", "Arial", sans-serif),
 );
 
 $font-weights: (
+  light: 300,
   normal: 400,
   regular: 400,
+  bold: 700,
 );
 
 $line-height-base: 24px;
