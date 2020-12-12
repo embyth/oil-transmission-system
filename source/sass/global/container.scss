@@ -1,17 +1,15 @@
 .container {
-  width: auto;
-  padding: padding(container-m);
+  max-width: $desktop-width;
+  padding: padding(container-d);
   margin: 0 auto;
 
   @media ($tablet) {
-    position: relative;
     width: auto;
     padding: padding(container-t);
   }
 
-  @media ($desktop) {
-    width: auto;
-    padding: padding(container-d);
-    max-width: $desktop-width;
+  @media ($mobile) {
+    min-width: $mobile-width;
+    padding: padding(container-m);
   }
 }

@@ -1,0 +1,40 @@
+.site-heading {
+  text-transform: uppercase;
+  font-size: fz(h1-d);
+  font-weight: fw(bold);
+  color: $primary;
+  line-height: lh(h1-d);
+  margin: 40px 0;
+  padding: 0;
+
+  @media ($tablet) {
+    font-size: fz(h1-t);
+    line-height: lh(h1-t);
+  }
+
+  @media ($mobile) {
+    font-size: fz(h1-m);
+    line-height: lh(h1-m);
+    margin: 20px 0;
+  }
+}
+
+.section-heading {
+  margin: 30px 0;
+  padding: 0;
+  font-weight: fw(bold);
+  font-size: fz(h2-d);
+  line-height: lh(h2-d);
+  text-transform: uppercase;
+  color: $primary;
+
+  @media ($tablet) {
+    font-size: fz(h2-t);
+    line-height: lh(h2-t);
+  }
+
+  @media ($mobile) {
+    font-size: fz(h2-m);
+    line-height: lh(h2-m);
+  }
+}
