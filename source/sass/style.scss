@@ -11,6 +11,7 @@
 /* === Layouts === */
 @import "global/container";
 @import "global/layout";
+@import "global/headings";
 
 /* === Interactive Elements === */
 @import "global/buttons";
@@ -23,3 +24,4 @@
 @import "blocks/aside";
 @import "blocks/socials";
 @import "blocks/mentions";
+@import "blocks/intro";

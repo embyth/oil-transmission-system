@@ -1,0 +1,56 @@
+.intro {
+  width: 100%;
+  padding: 150px 0 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  @media ($tablet) {
+    padding: 70px 0 25px 50px;
+  }
+
+  @media ($mobile) {
+    padding: 10px 0 25px;
+  }
+}
+
+.intro__text {
+  font-size: fz(intro-d);
+  line-height: lh(intro-d);
+  width: 100%;
+  margin: 70px 0;
+
+  @media ($tablet) {
+    font-size: fz(intro-m);
+    line-height: lh(intro-t);
+  }
+
+  @media ($mobile) {
+    line-height: lh(intro-m);
+    margin: 0 0 20px;
+  }
+}
+
+.intro__buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  .button--secondary {
+    margin-right: 60px;
+  }
+
+  @media ($mobile) {
+    flex-flow: column nowrap;
+
+    .button--secondary {
+      margin-right: 0;
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+}

@@ -11,7 +11,7 @@ $mobile: "max-width: #{$max-mobile-width}";
 
 // Padding Variables
 $paddings: (
-  container-m: 0 30px,
+  container-m: 0 20px,
   container-t: 0 50px,
   container-d: 0 50px,
 );
@@ -33,29 +33,38 @@ $font-weights: (
   bold: 700,
 );
 
-$line-height-base: 22px;
-$line-height-link: 24px;
-$line-height-nav-d: 24px;
-$line-height-nav-m: 18px;
-
 $font-line-height: (
-  base: $line-height-base,
-  nav-d: $line-height-nav-d,
-  nav-m: $line-height-nav-m,
+  base: 22px,
+  nav-d: 24px,
+  nav-m: 18px,
+  h1-d: 46px,
+  h1-t: 46px,
+  h1-m: 34px,
+  h2-d: 42px,
+  h2-t: 42px,
+  h2-m: 30px,
+  intro-d: 30px,
+  intro-t: 28px,
+  intro-m: 24px,
 );
 
-$font-size-base: 18px;
-$font-size-link-d: 16px;
-$font-size-link-m: 14px;
-$font-size-nav-d: 18px;
-$font-size-nav-m: 12px;
-
 $font-sizes: (
-  base: $font-size-base,
-  link-d: $font-size-link-d,
-  link-m: $font-size-link-m,
-  nav-d: $font-size-nav-d,
-  nav-m: $font-size-nav-m,
+  base: 18px,
+  link-d: 16px,
+  link-m: 14px,
+  nav-d: 18px,
+  nav-m: 12px,
+  h1-d: 34px,
+  h1-t: 30px,
+  h1-m: 22px,
+  h2-d: 26px,
+  h2-t: 24px,
+  h2-m: 16px,
+  intro-d: 16px,
+  intro-t: 16px,
+  intro-m: 14px,
+  button-d: 16px,
+  button-m: 14px,
 );
 
 // Color Variables
