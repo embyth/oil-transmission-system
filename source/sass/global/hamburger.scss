@@ -10,22 +10,22 @@
 
 // Settings
 // ==================================================
-$hamburger-padding-x : 5px !default;
-$hamburger-padding-y : 5px !default;
-$hamburger-layer-width : 24px !default;
-$hamburger-layer-height : 2px !default;
-$hamburger-layer-spacing : 6px !default;
-$hamburger-layer-color : $dark !default;
-$hamburger-layer-border-radius : 0 !default;
-$hamburger-hover-opacity : 1 !default;
-$hamburger-active-layer-color : $primary !default;
+$hamburger-padding-x: 8px !default;
+$hamburger-padding-y: 11px !default;
+$hamburger-layer-width: 24px !default;
+$hamburger-layer-height: 2px !default;
+$hamburger-layer-spacing: 6px !default;
+$hamburger-layer-color: $dark !default;
+$hamburger-layer-border-radius: 0 !default;
+$hamburger-hover-opacity: 1 !default;
+$hamburger-active-layer-color: $primary !default;
 $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 
 // To use CSS filters as the hover effect instead of opacity,
 // set $hamburger-hover-use-filter as true and
 // change the value of $hamburger-hover-filter accordingly.
-$hamburger-hover-use-filter : false !default;
-$hamburger-hover-filter : opacity(60%) !default;
+$hamburger-hover-use-filter: false !default;
+$hamburger-hover-filter: opacity(60%) !default;
 $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
 // Types (Remove or comment out what you don’t need)
@@ -57,7 +57,7 @@ $hamburger-types: (squeeze) !default;
   position: relative;
 
   transition-property: opacity, filter;
-  transition-duration: 0.15s;
+  transition-duration: 0.3s;
   transition-timing-function: linear;
 
   // Normalize (<button>)
@@ -73,15 +73,14 @@ $hamburger-types: (squeeze) !default;
   &::after {
     content: "";
     position: absolute;
-    width: 0;
+    width: 100%;
     height: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
     background-color: $dark;
     z-index: -1;
-    transition: width 0.3s ease, height 0.3s ease;
+    transition: height 0.3s ease;
   }
 
   &:hover,
@@ -90,9 +89,7 @@ $hamburger-types: (squeeze) !default;
 
     @if $hamburger-hover-use-filter==true {
       filter: $hamburger-hover-filter;
-    }
-
-    @else {
+    } @else {
       opacity: $hamburger-hover-opacity;
     }
 
@@ -103,8 +100,7 @@ $hamburger-types: (squeeze) !default;
     }
 
     &::after {
-      width: 40px;
-      height: 40px;
+      height: 100%;
     }
   }
 
@@ -117,9 +113,7 @@ $hamburger-types: (squeeze) !default;
     &:hover {
       @if $hamburger-hover-use-filter==true {
         filter: $hamburger-active-hover-filter;
-      }
-
-      @else {
+      } @else {
         opacity: $hamburger-active-hover-opacity;
       }
     }
@@ -167,7 +161,6 @@ $hamburger-types: (squeeze) !default;
 }
 
 @if index($hamburger-types, squeeze) {
-
   /* Squeeze */
   .hamburger--squeeze {
     .hamburger-inner {
@@ -175,8 +168,7 @@ $hamburger-types: (squeeze) !default;
       transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
       &::before {
-        transition: top 0.075s 0.12s ease,
-          opacity 0.075s ease;
+        transition: top 0.075s 0.12s ease, opacity 0.075s ease;
       }
 
       &::after {
@@ -194,8 +186,7 @@ $hamburger-types: (squeeze) !default;
         &::before {
           top: 0;
           opacity: 0;
-          transition: top 0.075s ease,
-            opacity 0.075s 0.12s ease;
+          transition: top 0.075s ease, opacity 0.075s 0.12s ease;
         }
 
         &::after {
