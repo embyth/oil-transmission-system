@@ -12,7 +12,7 @@ $mobile: "max-width: #{$max-mobile-width}";
 // Padding Variables
 $paddings: (
   container-m: 0 20px,
-  container-t: 0 50px,
+  container-t: 0 30px,
   container-d: 0 50px,
 );
 
@@ -46,6 +46,16 @@ $font-line-height: (
   intro-d: 30px,
   intro-t: 28px,
   intro-m: 24px,
+  label-d: 26px,
+  label-m: 24px,
+  input-d: 20px,
+  input-m: 18px,
+  defs-d: 20px,
+  defs-t: 16px,
+  defs-m: 14px,
+  table-d: 24px,
+  table-t: 22px,
+  table-m: 18px,
 );
 
 $font-sizes: (
@@ -65,6 +75,16 @@ $font-sizes: (
   intro-m: 14px,
   button-d: 16px,
   button-m: 14px,
+  label-d: 16px,
+  label-m: 14px,
+  input-d: 16px,
+  input-m: 14px,
+  defs-d: 14px,
+  defs-t: 12px,
+  defs-m: 10px,
+  table-d: 16px,
+  table-t: 14px,
+  table-m: 12px,
 );
 
 // Color Variables
