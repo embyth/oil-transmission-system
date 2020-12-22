@@ -85,6 +85,14 @@
 }
 
 .data__table-input {
+  transition: z-index 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+
+  &:hover,
+  &:focus {
+    z-index: 2;
+  }
+
   @media ($tablet) {
     font-size: fz(table-t);
     line-height: lh(table-t);
