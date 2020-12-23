@@ -146,4 +146,3 @@ export const getParamsByDiameter = (diameter) => {
     pressureLimit: params.Plimit,
   };
 };
-
