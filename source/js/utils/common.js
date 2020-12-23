@@ -29,3 +29,15 @@ export const resetHighlightInput = (input) => {
 export const getRandomNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
 };
+
+// Метод створює елемент с повідомленням помилки
+export const spawnErrorMessage = (message) => {
+  const divElement = document.createElement(`div`);
+  divElement.style.cssText = `width: 100%; padding: 7px 10px; color: white; background-color: red; text-align: center;`;
+  divElement.textContent = message;
+  document.body.prepend(divElement);
+
+  setTimeout(() => {
+    document.body.firstElementChild.remove();
+  }, 5000);
+};
